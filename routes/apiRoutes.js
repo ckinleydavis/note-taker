@@ -26,9 +26,7 @@ router.delete("/notes/:id", (req, res) => {
 
         if (parseInt(req.params.id) !== db[i].id) {
             newDb.push(db[i])
-        }
-
-       
+        }  
     }
     db = newDb;
     res.json(db);
